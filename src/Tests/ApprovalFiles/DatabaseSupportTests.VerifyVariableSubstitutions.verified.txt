@@ -1,0 +1,30 @@
+﻿DB Operation: Open connection
+Info:         Beginning database upgrade
+Info:         Checking whether journal table exists..
+DB Operation: Execute scalar command: select COUNT(*) from SYSPROGRESS.SYSTABLES where TBL = 'schemaversions'
+DB Operation: Dispose command
+Info:         Journal table does not exist
+Info:         Executing Database Server script 'Script0001.sql'
+Info:         Checking whether journal table exists..
+DB Operation: Execute scalar command: select COUNT(*) from SYSPROGRESS.SYSTABLES where TBL = 'schemaversions'
+DB Operation: Dispose command
+Info:         Creating the "schemaversions" table
+DB Operation: Execute non query command: 
+
+CREATE TABLE "schemaversions"
+(
+    "scriptname" character varying(255) NOT NULL PRIMARY KEY,
+    "applied" timestamp NOT NULL
+)
+DB Operation: Dispose command
+Info:         The "schemaversions" table has been created
+DB Operation: Execute non query command: print SubstitutedValue
+DB Operation: Dispose command
+DB Operation: Create parameter
+Info:         DB Operation: Add parameter to command: =Script0001.sql
+DB Operation: Create parameter
+Info:         DB Operation: Add parameter to command: =<date>
+DB Operation: Execute non query command: insert into "schemaversions" (ScriptName, Applied) values (?, ?)
+DB Operation: Dispose command
+Info:         Upgrade successful
+DB Operation: Dispose connection
