@@ -9,7 +9,7 @@ namespace DbUp.OpenEdge;
 
 /// <summary>
 /// An implementation of the <see cref="IJournal"/> interface which tracks version numbers for an
-/// OpenEdge database using a table called SchemaVersions.
+/// OpenEdge database using a table called schemaversions.
 /// </summary>
 public class OpenEdgeJournal : TableJournal
 {

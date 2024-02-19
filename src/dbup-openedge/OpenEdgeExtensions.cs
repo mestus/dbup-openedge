@@ -68,7 +68,7 @@ public static class OpenEdgeExtensions
         var builder = new UpgradeEngineBuilder();
         builder.Configure(c => c.ConnectionManager = connectionManager);
         builder.Configure(c => c.ScriptExecutor = new OpenEdgeScriptExecutor(() => c.ConnectionManager, () => c.Log, schema, () => c.VariablesEnabled, c.ScriptPreprocessors, () => c.Journal));
-        builder.Configure(c => c.Journal = new OpenEdgeJournal(() => c.ConnectionManager, () => c.Log, schema, "SchemaVersions"));
+        builder.Configure(c => c.Journal = new OpenEdgeJournal(() => c.ConnectionManager, () => c.Log, schema, "schemaversions"));
         builder.WithPreprocessor(new OpenEdgePreprocessor());
         return builder;
     }
