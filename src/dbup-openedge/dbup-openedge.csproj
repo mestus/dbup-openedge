@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases. This package adds OpenEdge support.</Description>
+    <Title>DbUp OpenEdge Support</Title>
+    <Company>DbUp Contributors</Company>
+    <Product>DbUp</Product>
+    <Copyright>Copyright © DbUp Contributors 2024</Copyright>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <AssemblyName>dbup-openedge</AssemblyName>
+    <RootNamespace>DbUp.OpenEdge</RootNamespace>
+    <PackageId>dbup-openedge</PackageId>
+    <AssemblyOriginatorKeyFile>../dbup.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <RepositoryUrl>https://github.com/mestus/dbup-openedge</RepositoryUrl>
+    <PackageIcon>dbup-icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-core" Version="5.0.37"/>
+    <PackageReference Include="System.Data.Odbc" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Visible="false" Include="../dbup-icon.png" Pack="True" PackagePath=""/>
+  </ItemGroup>
+
+</Project>

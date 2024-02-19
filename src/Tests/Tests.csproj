@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net462;net8</TargetFrameworks>
+    <TargetFrameworks>net8</TargetFrameworks>
     <AssemblyName>Tests</AssemblyName>
-    <RootNamespace>DbUp.NewProvider.Tests</RootNamespace>
-    <!--    <ImplicitUsings>enable</ImplicitUsings> Can't use implict usings with net46 -->
+    <RootNamespace>DbUp.OpenEdge.Tests</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\dbup-newprovider\dbup-newprovider.csproj"/>
+    <ProjectReference Include="..\dbup-openedge\dbup-openedge.csproj"/>
     <PackageReference Include="DbUp.Tests.Common" Version="5.0.37"/>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
     <PackageReference Include="xunit" Version="2.6.6"/>

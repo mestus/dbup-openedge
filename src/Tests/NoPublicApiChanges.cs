@@ -1,11 +1,11 @@
 ﻿using DbUp.Tests.Common;
 
-namespace DbUp.NewProvider.Tests;
+namespace DbUp.OpenEdge.Tests;
 
 public class NoPublicApiChanges : NoPublicApiChangesBase
 {
     public NoPublicApiChanges()
-        : base(typeof(NewProviderExtensions).Assembly)
+        : base(typeof(OpenEdgeExtensions).Assembly)
     {
     }
 }
